@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto 한울</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04c1ea1f1c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    <h1>회원가입</h1>
+    <header>
+        <div class="header_top">
+            <ul class="top_wrap">
+                <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-list"></i></a></li>
+            </ul>
+        </div>
+        <h1 class="d_none">로또 한울</h1>
+        <div class="logo">
+            <a href="/"><img src="images/favicon.png" alt="로고"></a>
+        </div>
+    </header>
+    <section>
+        <h2 class="section_title">회원가입</h2>
+        <article>
+            <h3 class="d_none">회원가입 폼</h3>
+            <form action="#" id="register_form" method="post" autocomplete="off">
+                <ul>
+                    <li>
+                        <label for="user_id">아이디</label>
+                        <input type="text" id="user_id" required maxlength="16">
+                    </li>
+                    <li>
+                        <label for="user_pw">비밀번호</label>
+                        <input type="password" id="user_pw" required maxlength="24">
+                    </li>
+                    <li>
+                        <label for="user_security">인증번호</label>
+                        <input type="text" id="user_security" required maxlength="6">
+                        <a href="#" onclick="check_security">인증요청</a>
+                        <!-- input 태그도 사용이 가능하나 전송의 문제가 있음 -->
+                        <!-- <script>
+                            function check_security(){
+                                alert("인증서버 점검중 /n 잠시후 다시 시도해주세요")
+                            }
+                        </script> -->
+                    </li>
+                    <li>
+                        <label for="user_privacy"></label>
+                        <input type="checkbox" id="user_privacy">
+                        개인정보수집 및 이용에 동의합니다.
+                        <a href="#" class="warn">[전체보기]</a>
+                    </li>
+                    <li>
+                        <input type="submit" value="회원가입">
+                    </li>
+                </ul>
+            </form>
+        </article>
+        <!-- <h2>회원정보 입력</h2>
+        <article>
+            <form action=""></form>
+        </article> -->
+    </section>
+    <footer>
+        <ul class="links">
+            <li>
+                <a href="/">처음으로</a>
+            </li>
+            <li>
+                <a href="/cs">고객센터</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
