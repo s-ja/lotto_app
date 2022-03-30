@@ -1,31 +1,21 @@
-// 1게임 생성
+// 자바스크립트 변수 : var vs const,let(=상수) (상수 = 바뀌지 않는 수)(변수 = 바뀌는 수, 다만 하나만 담을 수 있음)
+// old // new 의 차이점
+// var 는 선언하지 않아도 사용이 가능, 전역과 지역이 명확하지 않음
 
-// 클릭할 대상
+// 사이드 메뉴 열기
 
-var make5num = document.querySelector("#make_num5")
+// 대상 : id요소 카멜 케이스, class 요소 케밥 케이스 / 자바스크립트는 언더바를 선호하긴 함(?)
+const open_btn = document.querySelector("#open_side")
+const close_btn = document.querySelector("#close_side")
+const side_pan = document.querySelector("#side_pannel")
 
-make5num.addEventListener("click", show5num);
+open_btn.addEventListener("click",side_open)
+close_btn.addEventListener("click",side_close)
 
-function show5num(){
-    var num_one = [];
-    for(var i=1;i<46;i++){ // 1~45 만든다.
-        num_one.push(i);
-    }
-   num_one.sort(function(){ //섞는다
-        return Math.random() - 0.5
-    });
-    // console.log(num_one); //확인한다.
-    // 추출 .slice() vs .splice()
+function side_open(){
+    side_pan.classList.remove("d_none")
+}
 
-    var start = Math.ceil(Math.random()*40); // 정수로 시작점
-    var new_num_one = num_one.slice(start,start+6);
-    console.log(new_num_one.sort(function(a,b){ // 오름차순정리
-        return a-b;
-    }));
-    var bonus_num = new_num_one[new_num_one.length-1]
-    console.log('보너스 번호 : '+bonus_num);
-    // 내일 진행
-    // localStorage.setItem("game_one",new_num_one)
-    // index 페이지 에서 만든 로또 번호들을 생성한 뒤의 화면으로 그대로 옮겨야 함
-     
+function side_close(){
+    side_pan.classList.add("d_none")
 }
