@@ -9,9 +9,11 @@ const open_btn = document.querySelector("#open_side")
 const close_btn = document.querySelector("#close_side")
 const side_pan = document.querySelector("#side_pannel")
 
+// 이벤트 등록
 open_btn.addEventListener("click",side_open)
 close_btn.addEventListener("click",side_close)
 
+// 함수
 function side_open(){
     side_pan.classList.remove("d_none")
 }

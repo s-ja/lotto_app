@@ -2,11 +2,11 @@
 
 // 클릭할 대상
 
-var make5num = document.querySelector("#make_num5")
+var make1num = document.querySelector("#make_num1")
 
-make5num.addEventListener("click", show5num);
+make1num.addEventListener("click", show1num);
 
-function show5num(){
+function show1num(){
     var num_one = [];
     for(var i=1;i<46;i++){ // 1~45 만든다.
         num_one.push(i);

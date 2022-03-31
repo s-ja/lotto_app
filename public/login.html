@@ -41,7 +41,7 @@
     <header>
         <div class="header_top">
             <ul class="top_wrap">
-                <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
                 <!-- 메뉴바 : burger icon -->
                 <li>
                     <div id="open_side">
@@ -59,11 +59,11 @@
         <h2 class="section_title">로그인</h2>
         <article>
             <h3 class="d_none">로그인 폼</h3>
-            <form action="#" id="register_form" method="post" autocomplete="off">
+            <form action="#" id="login_form" method="post" autocomplete="off">
                 <ul>
                     <li>
                         <label for="user_id">아이디</label>
-                        <input type="text" id="user_id" required maxlength="16">
+                        <input type="text" id="user_id" pattern="/^[a-z]+[a-z0-9]{5,19}$/" required minlength="6" maxlength="20" placeholder="영어,숫자 조합 최대 20자">
                     </li>
                     <li>
                         <label for="user_pw">비밀번호</label>
@@ -73,10 +73,11 @@
                         <input type="submit" value="로그인">
                     </li>
                     <li>
-                        <ul>
-                            <li>구글</li>
-                            <li>인스타</li>
-                            <li>페이스북</li>
+                        <p class="text_center">또는</p>
+                        <ul class="sns_icons">
+                            <li><a href=""><i class="fa-brands fa-google"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fab fa-facebook-f"></i></a></li>
                         </ul>
                     </li>
                 </ul>
