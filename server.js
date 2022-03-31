@@ -25,7 +25,15 @@ app.get('/login', (req, res) => {
 })
 
 app.get('/add_user', (req, res) => {
-    res.send("서비스 준비중입니다!")
+    res.send("정상적으로 회원가입 되셨습니다!")
+})
+
+app.get('/result1', (req, res) => {
+    res.sendFile(__dirname+'/public/result1.html')
+})
+
+app.get('/result5', (req, res) => {
+    res.sendFile(__dirname+'/public/result5.html')
 })
 
 app.listen(port, () => {
