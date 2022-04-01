@@ -23,13 +23,12 @@ function side_close(){
 }
 
 const toggle_btn = document.querySelector("#blind")
-
-toggle_btn.addEventListener("click",handle_click)
+toggle_btn.addEventListener("click", handle_click)
 
 let btn_status = "lock"
 
 function handle_click(e){
-    if(e.target.className == "lock"){
+    if(e.target.className == btn_status){
         console.log("잠금을 해제합니다.");
         unlock("해제");
     }else{
