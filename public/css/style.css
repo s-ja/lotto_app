@@ -249,6 +249,34 @@ section{
         letter-spacing: 2px;
     }
 
+    ul#lotto_num li{
+        display: flex;
+        /* align-items: center; */
+    }
+    ul#lotto_num li span{
+        display: block;
+        /* text-align: center; */
+        height: 50px;
+        line-height: 50px;
+        box-sizing: border-box;
+    }
+    ul#lotto_num li > span:first-child{
+        text-align: center;
+        background: var(--main-color1);
+        border-top: 1px  solid #E4E4E4;
+        border-bottom: 1px  solid #E4E4E4;
+        letter-spacing: 2px;
+        flex: 1;
+        padding: 0 1.25rem;
+    }
+    ul#lotto_num li > span:last-child{
+        border-top: 1px  solid #E4E4E4;
+        border-bottom: 1px  solid #E4E4E4;
+        letter-spacing: 2px;
+        flex: 9;
+        text-indent: 20%;
+    }
+
     #blind{
         height: 30px;
         background: var(--main-color1);

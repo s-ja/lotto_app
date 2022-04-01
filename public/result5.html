@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto 한울</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04c1ea1f1c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <h1 class="d_none">로또 한울</h1>
+    <div id="side_pannel" class="d_none">
+        <div id="close_side">
+            <a href="#"><i class="fa-solid fa-close"></i></a>
+        </div>
+        <div class="pannel_overlay">
+            <nav>
+                <ul id="snb">
+                    <li><a href="">소개</a></li>
+                    <li><a href="">서비스</a></li>
+                    <li><a href="">당첨확률</a></li>
+                    <li><a href="">당첨후기</a></li>
+                </ul>
+                <hr>
+                <ul class="icon_links">
+                    <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="/login"><i class="fa-solid fa-lock"></i></a></li>
+                    <li><a href="/join"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+                    <li><a href="/cs"><i class="fa-solid fa-headset"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <header>
+        <div class="header_top">
+            <ul class="top_wrap">
+                <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                <!-- 메뉴바 : burger icon -->
+                <li>
+                    <div id="open_side">
+                        <a href="#"><i class="fa-solid fa-list"></i>
+                        </a>
+                    </div>
+                </li>
+                <!-- <li class="d_none"><a href="#"><i class="fa-solid fa-close"></i></a></li> -->
+        </div>
+        <div class="logo">
+            <a href="/"><img src="images/favicon.png" alt="로고"></a>
+        </div>
+    </header>
+    <section>
+        <h2 class="d_none">추천번호</h2>
+        <p class="text_center my_1">로또 한울은 고객님의 당첨을 기원합니다.</p>
+       <article>
+           <h3 class="d_none">생성된 로또 번호</h3>
+           <ul id="lotto_num"></ul>
+       </article>
+       <article>
+           <h3 class="d_none">지난주 당첨번호</h3>
+           <button id="blind" class="lock">블라인드 해제</button>
+       </article>
+           <script>
+               const lotto_num = document.querySelector("#lotto_num")
+               let lottos = localStorage.getItem("lotto_nums")
+               lottos = JSON.parse(lottos);
+               window.addEventListener("load",function(){
+                //    console.dir(div);
+                const labels = ["A","B","C","D","E"]
+                for (let i=0; i<lottos.length;i++){
+                    let num = lottos[i]
+                    // console.log(num);
+                    num = String(num).replaceAll(",", " ");
+                       let li_tag = document.createElement("li");
+                       li_tag.innerHTML = "<span>"+labels[i]+"</span>"+"<span>"+num+"</span>";
+                       lotto_num.appendChild(li_tag);
+                   }
+                //    let new_lotto_num = lottos
+                //    console.log(typeof new_lotto_num);
+                // //    let row = `<span class="lotto_title">A</span>
+                // //    <p class="text_center">
+                // //     ${new_lotto_num}
+                // //     </p>`
+                // let row = `
+                // <div class="dl_wrap">
+                //     <dl class="text_center">
+                //         <dt>A</dt>
+                //         <dd>${new_lotto_num}</dd>
+                //     </dl>
+                // </div>
+                // `
+                // lotto_num.innerHTML = lottos
+               })
+           </script>
+    </section>
+    <footer>
+        <ul class="links">
+            <li>
+                <a href="/join">회원가입</a>
+            </li>
+            <li>
+                <a href="/cs">고객센터</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script/route.js"></script>
+    <!-- <script src="script/lotto.js"></script> -->
+    <!-- <a href="/login">로그인</a> -->
+</body>
+</html>
