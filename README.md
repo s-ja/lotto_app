@@ -9,3 +9,5 @@ node_js 로 구현하는 로또 웹 앱
 4. css3
 5. nodejs setting
 6. node package : express, nodemon, ngrok
+
+### 22.4.1 13:00 기준 1차 완성
