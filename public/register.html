@@ -72,11 +72,11 @@
                     <li>
                         <label for="user_security">인증번호</label>
                         <input type="text" id="user_security" required maxlength="6">
-                        <a  class="text_center" id="click_security" onclick="check_security">인증요청</a>
+                        <a  class="text_center" id="click_security" onclick="check_security()">인증요청</a>
                         <!-- input 태그도 사용이 가능하나 전송의 문제가 있음 -->
                         <script>
                             function check_security(){
-                                alert("인증서버 점검중 /n 잠시후 다시 시도해주세요")
+                                alert('인증서버 점검중 \n 잠시후 다시 시도해주세요')
                             }
                         </script>
                     </li>
@@ -84,7 +84,7 @@
                         <label for="user_privacy">인증번호</label>
                         <input type="checkbox" id="user_privacy" checked>
                         개인정보수집 및 이용에 동의합니다.
-                        <a href="#" class="warn" onclick =" alert('서버점검중입니다, 잠시후 다시 시도하세요')" >[전체보기]</a>
+                        <a href="#" class="warn" onclick ="alert('서버점검중입니다, 잠시후 다시 시도하세요')" >[전체보기]</a>
                     </li>
                     <li>
                         <input type="submit" value="회원가입">

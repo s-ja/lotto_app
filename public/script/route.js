@@ -21,3 +21,29 @@ function side_open(){
 function side_close(){
     side_pan.classList.add("d_none")
 }
+
+const toggle_btn = document.querySelector("#blind")
+
+toggle_btn.addEventListener("click",handle_click)
+
+let btn_status = "lock"
+
+function handle_click(e){
+    if(e.target.className == "lock"){
+        console.log("잠금을 해제합니다.");
+        unlock("해제");
+    }else{
+        console.log("잠금합니다.");
+         lock("잠금");
+    }
+}
+
+function unlock(message){
+    toggle_btn.className = "unlock";
+    toggle_btn.textContent= message
+}
+
+function lock(message){
+     toggle_btn.className = "lock";
+     toggle_btn.textContent = message
+}
