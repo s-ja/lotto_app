@@ -50,15 +50,15 @@ function show5num(){
     for(let i=1;i<46;i++){ // 1~45 만든다.
         num_five.push(i);
     }
-    //화살표 함수 표기법
-    num_five.sort((a,b)=>{return Math.random()-0.7});
-    // console.log(num_five);
-
+    // console.log(num_five); // 최초 만들어진 1~45 순서대로 출력
+    
     // 일반함수 표기법
     // new_num_one.sort(function(a,b){
-    //     return a-b;
+    //         return Math.random() - 0.7;
     // });
-
+    
+    //화살표 함수 표기법
+    num_five.sort((a,b)=>{return Math.random()-0.7});
 
     // 6개씩 랜덤 5회 추출
     let num_five_arr =[];
