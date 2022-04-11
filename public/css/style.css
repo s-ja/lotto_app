@@ -361,7 +361,6 @@ section{
         margin: 0 0 0 10px;
     }
 }
-
 @media screen and (max-width: 375px){
     #lotto_num dd{
         letter-spacing: -1px;
